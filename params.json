@@ -1,0 +1,6 @@
+{
+  "name": "Gulp",
+  "tagline": "html css javascript gulp",
+  "body": "## Gulp starter Project for HTML, SASS, JS \r\n\r\nThis is inspired from CSS trick tutorial. i am customizing this according to my own needs.",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
