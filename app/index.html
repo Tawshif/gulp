@@ -2,27 +2,68 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title></title>
-  <!--build:css css/styles.min.css-->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <!--endbuild-->
+    <meta charset="UTF-8">
+    <title></title>
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!--endbuild-->
 </head>
 
 <body>
-  
-  <main>
-    <section>
-      <h2>Hello Gulp</h2>
-      <span class="glyphicon glyphicon-headphones "></span>
-    </section>
-  </main>
+    <main>
+        <section>
+            <h2>Hello Gulp</h2>
+            <span class="glyphicon glyphicon-headphones "></span>
+        </section>
+        <section id="sayHello"></section>
+        <script>
+          function openAlert(mess) {
+              alert(mess);
+          }
+        </script>
+        <a href="javaScript:void(0)" onClick="alert('Hello');">Say hello</a>
+        <br />
+        <a href="javaScript:void(0)" onClick="openAlert('Hi say simething');">Say hello 2</a>
+        <br />
+        <a href="javaScript:void(0)" onmouseover="this.style.color='red';" onmouseleave="this.style.color='orange';" ondblclick="this.text='You double clicked on me Garr...!!';" onclick="this.text='hello u clicked';">Say hello 2</a>
+        <br />
+        <input type="text" id="randInput" onChange="var dataEntered=document.getElementById('randInput').value; alert('User Typed ' + dataEntered);">
+        <br />
+        <br />
+        <!-- When a user clicks a key provide info on the key clicked -->
+        <form action="#" id="sampForm">
+            <input id='charInput' type="text">
+            <p id="keyData">Key Data Here</p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+        <br />
+        <br />
+        <img src="ntt-logo.png" id="logo">
+        <button id="logoButton">Get Logo</button>
+        <br />
+        <input id='mouseInput' type="text" size="30">
+        <br /> Mouse X:
+        <input type="text" id="mouseX">
+        <br /> Mouse Y:
+        <input type="text" id="mouseY">
+        <br />
+        <button id="clearInputs">Clear Inputs</button>
+        <br />
 
-  <!--build:js js/main.min.js -->
-  <script src="js/lib/a.js"></script>
-  <script src="js/main.js"></script>
-  <!-- endbuild -->
+        <script>
+          function getChar(event) {
+            if (event.wich == null) {
+              return String.fromCharCode(event.keyCode);
+            } else {}
+          }
+        </script>
+    </main>
+    <!--build:js js/main.min.js -->
+    <script src="js/lib/a.js"></script>
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>
