@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Shit just got real!</title>
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -11,37 +11,86 @@
 </head>
 
 <body>
+<div class="top_nav">
+  <div class="nav_menu">
+  <div class="navbar">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">Title</a>
+          <ul class="nav navbar-nav">
+              <li class="active">
+                  <a href="#">Home</a>
+              </li>
+              <li>
+                  <a href="#">Link</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  </div>
+</div>
     <main class="container">
-        
-        <div class="col-md-4 col-lg-4">
-            <div class="panel panel-danger">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Panel title</h3>
-                </div>
-                <div class="panel-body">
-                    <ul class="list-group">
-                        <a href="#" class="list-group-item active">
-                            <h4 class="list-group-item-heading">List group item heading</h4>
-                            <p class="list-group-item-text">Content goes here</p>
-                        </a>
-                        <a href="#" class="list-group-item ">
-                            <h4 class="list-group-item-heading">List group item heading</h4>
-                            <p class="list-group-item-text">Content goes here</p>
-                        </a>
-                        <a href="#" class="list-group-item ">
-                            <h4 class="list-group-item-heading">List group item heading</h4>
-                            <p class="list-group-item-text">Content goes here</p>
-                        </a>
-                        <a href="#" class="list-group-item ">
-                            <h4 class="list-group-item-heading">List group item heading</h4>
-                            <p class="list-group-item-text">Content goes here</p>
-                        </a>
-                        <a href="#" class="list-group-item ">
-                            <h4 class="list-group-item-heading">List group item heading</h4>
-                            <p class="list-group-item-text">Content goes here</p>
-                        </a>
+        <div class="col-sm-offset-3 col-sm-6">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Hover rows <small>Try hovering over the rows</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Settings 1</a>
+                                </li>
+                                <li><a href="#">Settings 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
                     </ul>
+                    <div class="clearfix"></div>
                 </div>
+                <div class="x_content">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
             </div>
         </div>
     </main>
