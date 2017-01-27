@@ -55,9 +55,42 @@
                 </ul>
             </nav>
         </div>
+        <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add Data</button>
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <form>
+                            <fieldset class="form-group">
+                                <label for="inputEmail3" class="col-form-label">First Name</label>
+                                <div class="">
+                                    <input type="text" class="form-control" id="inputEmail3" placeholder="First Name">
+                                </div>
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <label for="inputPassword3" class="col-form-label">Last Name</label>
+                                <div class="">
+                                    <input type="text" class="form-control" id="inputPassword3" placeholder="Last Name">
+                                </div>
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <label for="inputPassword3" class="col-form-label">Phone Number</label>
+                                <div class="">
+                                    <input type="text" class="form-control" id="inputPassword3" placeholder="Phone Number">
+                                </div>
+                            </fieldset>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Close</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <!--build:js js/main.min.js -->
-    <script src="js/lib/a.js"></script>
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/bootstrap.js"></script>
     <script src="js/main.js"></script>
     <!-- endbuild -->
 </body>
