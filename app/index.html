@@ -1,91 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Shit just got real!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/main.css">
     <!--endbuild-->
 </head>
-
+<style>
+    html{
+        font-size: 14px;
+        font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    }
+    .card{
+    font-size: 1em;
+    background: #fff;
+    padding: 0;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    
+    }
+    .card-block{
+    
+    border: none;
+    border-top: 1px solid rgba(34,36,38,.1);
+    background: 0 0;
+    margin: 0;
+    padding: 1em;
+    box-shadow: none;
+    font-size: 1em;
+    border-radius: 0;
+    }
+    .card-img-top{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .card-title{
+        font-weight: 700;
+        font-size: 1.28571429em;
+        margin-top: -.21425em;
+        line-height: 1.2857em;
+    }
+    .meta{
+        font-size: 1em;
+        color: rgba(0,0,0,.4);
+    }
+    .meta>a{
+        color: rgba(0,0,0,.4);
+    }
+    .meta>a:hover {
+        color: rgba(0,0,0,.87);
+    }
+    .card-text {
+        margin-top: .5em;
+        clear: both;
+        color: rgba(0,0,0,.68);
+    }
+    .extra-content{
+        max-width: 100%;
+        border-top: 1px solid rgba(0,0,0,.05)!important;
+        position: static;
+        padding: .75em 1em;
+        top: 0;
+        left: 0;
+        color: rgba(0,0,0,.4);
+        font-size: 1em;
+    }
+</style>
 <body>
-    <nav class="navbar navbar-light mb-5 bg-faded">
-        <h1 class="navbar-brand mb-0">Navbar</h1>
-    </nav>
     <main class="container">
-        <div class="">
-            <table class="table table-bordered table-hover table-striped">
-                <thead class="thead-inverse">
-                    <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Phone number</th>
-                    </tr>
-                </thead>
-                <tbody id="table-data">
-  <!--                   <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr> -->
-                </tbody>
-            </table>
-            <nav aria-label="some thing is good" class="mt-5">
-                <ul class="pagination pagination-sm" id="pagination">
-                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
-            </nav>
-        </div>
-        <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add Data</button>
-        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <form>
-                            <fieldset class="form-group">
-                                <label for="inputEmail3" class="col-form-label">First Name</label>
-                                <div class="">
-                                    <input type="text" class="form-control" id="inputEmail3" placeholder="First Name">
-                                </div>
-                            </fieldset>
-                            <fieldset class="form-group">
-                                <label for="inputPassword3" class="col-form-label">Last Name</label>
-                                <div class="">
-                                    <input type="text" class="form-control" id="inputPassword3" placeholder="Last Name">
-                                </div>
-                            </fieldset>
-                            <fieldset class="form-group">
-                                <label for="inputPassword3" class="col-form-label">Phone Number</label>
-                                <div class="">
-                                    <input type="text" class="form-control" id="inputPassword3" placeholder="Phone Number">
-                                </div>
-                            </fieldset>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Close</button>
-                            </div>
-                        </form>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+                    <img class="card-img-top" src="http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif">
+                    <div class="card-block">
+                        <h4 class="card-title">Tawshif Ahsan Khan</h4>
+                        <div class="meta">
+                            <a>Friends</a>
+                        </div>
+                        <div class="card-text">
+                            Tawshif is a web designer living in Bangladesh.
+                        </div>
+                    </div>
+                    <div class="extra-content">
+                        <span class="float-right">Joined in 2013</span>
+                        <span><i class=""></i>75 Friends</span>
                     </div>
                 </div>
             </div>
+                        
         </div>
     </main>
     <!--build:js js/main.min.js -->
