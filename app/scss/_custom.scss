@@ -1,6 +1,9 @@
 $black: #000;
 $white:#fff;
 $whiteTwo: #f0f0f0;
+
+$materialBlack:#374046;
+
 html {
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -20,4 +23,19 @@ html {
 
 .page-item > * {
     border: none;
+}
+
+
+.custom-checkbox {
+  .custom-control-indicator {
+    
+  }
+
+  .custom-control-input:checked ~ .custom-control-indicator {
+    
+  }
+
+  .custom-control-input:indeterminate ~ .custom-control-indicator {
+    
+  }
 }
