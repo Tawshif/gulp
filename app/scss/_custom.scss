@@ -74,3 +74,41 @@ html, body{
         }
     }
 }
+
+
+.table {
+    &-custom{
+        @extend .table;
+        @extend .table-sm;
+        @extend .table-bordered;
+        @extend .table-responsive;
+        background: $white;
+        th:not(.no-sort) {
+            vertical-align: middle;
+            background: $custom-select-bg $custom-select-indicator no-repeat right $custom-select-padding-x center;
+            background-size: $custom-select-bg-size;
+        }
+        th{
+            // background-color:rgba(52, 152, 219, 0.70)!important;
+            background-color: #26c6da !important;
+            // color: rgba(44, 62, 80, 0.70);
+            color: rgba(white, 0.75); 
+            // color: darken(#26c6da, 20);
+            cursor: pointer;
+            &.active{
+                 background-color:darken(#26c6da, 7)!important;
+                 color: rgba(white, 0.90); 
+            }
+            &:active{
+                background-color:darken(#26c6da, 7)!important;
+                color: rgba(white, 0.90); 
+            }
+        }
+        th,td{
+            @extend .text-center;
+            vertical-align: middle; 
+            width: 1%;
+            white-space: nowrap
+        }
+    }
+}
