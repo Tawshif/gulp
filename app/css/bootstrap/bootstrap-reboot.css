@@ -146,7 +146,8 @@ label,
 select,
 summary,
 textarea {
-  touch-action: manipulation; }
+  -ms-touch-action: manipulation;
+      touch-action: manipulation; }
 
 table {
   border-collapse: collapse; }
