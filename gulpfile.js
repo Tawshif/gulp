@@ -38,9 +38,9 @@ gulp.task('sass', function() {
             this.emit('end');
         }))
         .pipe(sass()) // Passes it through a gulp-sass
-        .pipe(sourcemaps.write())
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(plumber.stop())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('app/css')) // Outputs it in the css folder
         .pipe(browserSync.reload({ // Reloading with Browser Sync
             stream: true
