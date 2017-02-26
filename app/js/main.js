@@ -1,38 +1,23 @@
 $(document).ready(function() {
     table = $('#dataTable').dataTable({
-        // "searching":false
+    	"lengthMenu":  [5, 10, 15, 20]
     });
     $('#searchTable').keyup(function() {
         table.fnFilter($(this).val()).draw();
     });
+    $('#next').on( 'click', function () {
+	    table.page( 'next' ).draw( 'page' );
+	} );
 
-	table.on("draw.dt", function (e) {
-	    setCustomPagingSigns.call($(this));
-	}).each(function () {
-	    setCustomPagingSigns.call($(this)); // initialize
-	});
+	$('#previous').on( 'click', function () {
+	    table.page( 'previous' ).draw( 'page' );
+	} );
 
-	// this should work with standard datatables styling - li.previous/li.next
-	function setCustomPagingSigns() {
-	    var wrapper = this.parent();
-	    wrapper.find("li.previous > a").text("<");
-	    wrapper.find("li.next > a").text(">");
-	}
+	var info = table.page.info();
 
-	//  - a.previous/a.next
-	function setCustomPagingSigns() {
-	    var wrapper = this.parent();
-	    wrapper.find("a.previous").text("<");
-	    wrapper.find("a.next").text(">");
-	}
-
-	// this one works with complex headers example, bootstrap style
-	function setCustomPagingSigns() {
-	    var wrap = this.closest(".dataTables_wrapper");
-	    var lastrow= wrap.find("div.row:nth-child(3)");
-	    lastrow.find("li.previous>a").text("<");
-	    lastrow.find("li.next>a").text(">");
-	}
+	$('#tableInfo').html(
+	    'Currently showing page '+(info.page+1)+' of '+info.pages+' pages.'
+	);
 
 });
 
