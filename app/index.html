@@ -11,83 +11,9 @@
 </head>
 
 <body>
-    <main>
-        <section>
-            <h2>Hello Gulp</h2>
-            <span class="glyphicon glyphicon-headphones "></span>
-        </section>
-        <section id="sayHello"></section>
-        <script>
-          function openAlert(mess) {
-              alert(mess);
-          }
-        </script>
-        <a href="javaScript:void(0)" onClick="alert('Hello');">Say hello</a>
-        <br />
-        <a href="javaScript:void(0)" onClick="openAlert('Hi say simething');">Say hello 2</a>
-        <br />
-        <a href="javaScript:void(0)" onmouseover="this.style.color='red';" onmouseleave="this.style.color='orange';" ondblclick="this.text='You double clicked on me Garr...!!';" onclick="this.text='hello u clicked';">Say hello 2</a>
-        <br />
-        <input type="text" id="randInput" onChange="var dataEntered=document.getElementById('randInput').value; alert('User Typed ' + dataEntered);">
-        <br />
-        <br />
-        <!-- When a user clicks a key provide info on the key clicked -->
-        <form action="#" id="sampForm">
-            <input id='charInput' type="text">
-            <p id="keyData">Key Data Here</p>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
-        </form>
-        <br />
-        <br />
-        <img src="ntt-logo.png" id="logo">
-        <button id="logoButton">Get Logo</button>
-        <br />
-        <input id='mouseInput' type="text" size="30">
-        <br /> Mouse X:
-        <input type="text" id="mouseX">
-        <br /> Mouse Y:
-        <input type="text" id="mouseY">
-        <br />
-        <button id="clearInputs">Clear Inputs</button>
-        <br />
 
-        <script>
-
-        function getChar(e) {
-           if (e.which == null) {
-            return String.fromCharCode(event.keyCoad);
-           } else {
-
-           }
-         }         
-
-document.addEventListener("keydown", function(event) {
-  
-  console.log(event);
-    
-  document.body.innerHTML = `
-    &nbsp;&nbsp;&nbsp;
-    <b>which: ${event.which}</b>
-    <br>&nbsp;
-    <b>keyCode:</b> ${event.keyCode}
-    <br>&nbsp;&nbsp;&nbsp;
-    <b>shiftKey:</b> ${event.shiftKey}
-    </br>&nbsp;&nbsp;&nbsp;&nbsp;
-    <b>altKey:</b> ${event.altKey}
-    <br>&nbsp;&nbsp;&nbsp;
-    <b>ctrlKey:</b> ${event.ctrlKey}
-    <br>&nbsp;&nbsp;
-    <b>metaKey:</b> ${event.metaKey}
-  `;
-  
-});
-
-
-        </script>
     </main>
     <!--build:js js/main.min.js -->
-    <script src="js/lib/a.js"></script>
     <script src="js/main.js"></script>
     <!-- endbuild -->
 </body>
