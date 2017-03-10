@@ -10,9 +10,11 @@ var cssnano = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
+var concat = require('gulp-concat');
 var plumber = require('gulp-plumber');
 var runSequence = require('run-sequence');
 var jshint = require('gulp-jshint');
+var babel = require('gulp-babel');
 
 var autoprefixerOptions = {
   browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
@@ -25,6 +27,8 @@ gulp.task('browserSync', function () {
   browserSync({
     notify: true,
     port: 5000,
+    logLevel: "info",
+    logConnections: false,
     server: {
       baseDir: 'app'
     }
@@ -48,6 +52,23 @@ gulp.task('sass', function () {
     }));
 })
 
+// compile es6
+gulp.task('es6', () => {
+  return gulp.src('app/es6/**/*.js')
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(plumber(function (error) {
+      console.log("Error happend!", error.message);
+      this.emit('end');
+    }))
+    .pipe(sourcemaps.init())
+    .pipe(concat('all.js'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('app/js'))
+    .pipe(plumber.stop());
+});
+
 // Js Hint
 gulp.task('jshint', function () {
   return gulp.src('app/js/**/*.js')
@@ -67,6 +88,7 @@ gulp.task('jshint', function () {
 // Watchers
 gulp.task('watch', function () {
   gulp.watch('app/scss/**/*.scss', ['sass']);
+  gulp.watch('app/es6/**/*.js', ['es6']);
   gulp.watch('app/js/**/*.js', ['jshint']);
   gulp.watch('app/*.html', browserSync.reload);
 })
@@ -114,7 +136,7 @@ gulp.task('clean:dist', function () {
 // ---------------
 
 gulp.task('default', function (callback) {
-  runSequence(['sass', 'browserSync', 'watch'],
+  runSequence(['sass','es6', 'browserSync', 'watch'],
     callback
   )
 })
