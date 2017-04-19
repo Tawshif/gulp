@@ -1,0 +1,22 @@
+{
+  "name": "Gulp-starter",
+  "description": "This is a development starter project",
+  "main": "index.js",
+  "authors": [
+    "tawshif <anikphp@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Tawshif/gulp",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}
