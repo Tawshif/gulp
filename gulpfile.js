@@ -117,7 +117,7 @@ gulp.task('default', function (callback) {
   runSequence(['sass', 'browserSync', 'watch'],
     callback
   )
-})
+});
 
 gulp.task('build', function (callback) {
   runSequence(
@@ -125,4 +125,4 @@ gulp.task('build', function (callback) {
     'sass', ['useref', 'images', 'fonts'],
     callback
   )
-})
+});
