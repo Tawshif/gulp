@@ -1,0 +1,36 @@
+.nav{
+  display: flex;
+  justify-content: space-between;
+  height:80px;
+  .brand-name{
+    align-self: center;
+    color: deepskyblue;
+    font-size: 20px;
+    border-bottom: 2px solid;
+  }
+  .nav-links{
+    align-self: center;
+    .link{
+      margin-left: 20px;
+      color: #4a3a3a;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      &:hover,&.active{
+        color:black;
+        border-bottom: 2px solid;
+        transform: scale(1.02);
+      }
+    }
+    .divider{
+      margin-left: 20px;
+      height: 16px;
+      width: 1px;
+      background: #6fcff1;
+      display: inline-block;
+      vertical-align: middle;
+      transform: rotate(14deg);
+      position: relative;
+      bottom: 2px;
+    }
+  }
+}
