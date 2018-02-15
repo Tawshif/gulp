@@ -1,3 +1,16 @@
+//Custom Variables
 @import "variables";
-@import "../vendors/bootstrap/scss/bootstrap.scss";
+
+//Required Bootstrap
+@import "../vendors/bootstrap/scss/functions";
+@import "../vendors/bootstrap/scss/variables";
+@import "../vendors/bootstrap/scss/mixins";
+
+// Optional
+@import "../vendors/bootstrap/scss/reboot";
+@import "../vendors/bootstrap/scss/type";
+@import "../vendors/bootstrap/scss/images";
+@import "../vendors/bootstrap/scss/code";
+@import "../vendors/bootstrap/scss/grid";
+
 @import 'theme';
