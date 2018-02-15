@@ -17,6 +17,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^4.0.0"
+    "bootstrap": "bootstrap4#^4.0.0",
+    "tether": "^1.4.3",
+    "jquery": "^3.3.1"
   }
 }
