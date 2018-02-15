@@ -1,3 +1,3 @@
 # Gulp starter Project for HTML, SASS, JS 
 
-this is inspired from CSS trick tutorial. i am customizing this according to my own needs.
+this is inspired from CSS trick. I have customized according to my need.
