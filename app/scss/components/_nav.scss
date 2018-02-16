@@ -1,36 +1,40 @@
+$primary-color:#00838F;
 .nav{
   display: flex;
   justify-content: space-between;
   height:80px;
   .brand-name{
     align-self: center;
-    color: deepskyblue;
+    color: $primary-color;
     font-size: 20px;
-    border-bottom: 2px solid;
   }
   .nav-links{
     align-self: center;
     .link{
       margin-left: 20px;
-      color: #4a3a3a;
+      color: #7d7d7d;
       text-decoration: none;
-      transition: all 0.2s ease;
+      display: inline-block;
+      transition: all 0.1s cubic-bezier(0.9, 0.61, 0, 0.39);
+      vertical-align: bottom;
+      position: relative;
+      line-height: 16px;
+      padding: 0 0 3px 0;
       &:hover,&.active{
-        color:black;
+        color: $primary-color;
         border-bottom: 2px solid;
-        transform: scale(1.02);
+        transform: scale(1.03);
       }
     }
     .divider{
       margin-left: 20px;
-      height: 16px;
-      width: 1px;
-      background: #6fcff1;
+      height: 1px;
+      width: 16px;
+      background: #b4c4ca;
       display: inline-block;
       vertical-align: middle;
-      transform: rotate(14deg);
       position: relative;
-      bottom: 2px;
+      border-radius: 15px;
     }
   }
 }
