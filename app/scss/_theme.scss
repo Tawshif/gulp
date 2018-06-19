@@ -1,0 +1,64 @@
+//Required Bootstrap
+//@import "../vendors/bootstrap/scss/functions";
+//@import "../vendors/bootstrap/scss/variables";
+//@import "../vendors/bootstrap/scss/mixins";
+@import "../vendors/bootstrap/scss/bootstrap";
+
+// Optional
+//@import "../vendors/bootstrap/scss/reboot";
+//@import "../vendors/bootstrap/scss/type";
+//@import "../vendors/bootstrap/scss/images";
+//@import "../vendors/bootstrap/scss/code";
+//@import "../vendors/bootstrap/scss/grid";
+
+// Import core styles
+@import "../vendors/coreui/scss/variables";
+@import "../vendors/coreui/scss/mixins";
+
+// Animations
+@import "../vendors/coreui/scss/animate";
+
+// Vendors
+@import "../vendors/coreui/scss/vendors";
+
+// Components
+@import "../vendors/coreui/scss/aside";
+@import "../vendors/coreui/scss/avatars";
+@import "../vendors/coreui/scss/badge";
+@import "../vendors/coreui/scss/breadcrumb-menu";
+@import "../vendors/coreui/scss/breadcrumb";
+@import "../vendors/coreui/scss/brand-card";
+@import "../vendors/coreui/scss/brand-buttons";
+@import "../vendors/coreui/scss/buttons";
+@import "../vendors/coreui/scss/callout";
+@import "../vendors/coreui/scss/card";
+@import "../vendors/coreui/scss/charts";
+@import "../vendors/coreui/scss/dropdown";
+@import "../vendors/coreui/scss/footer";
+@import "../vendors/coreui/scss/grid";
+@import "../vendors/coreui/scss/header";
+@import "../vendors/coreui/scss/input-group";
+@import "../vendors/coreui/scss/images";
+@import "../vendors/coreui/scss/list-group";
+@import "../vendors/coreui/scss/modal";
+@import "../vendors/coreui/scss/nav";
+@import "../vendors/coreui/scss/progress";
+@import "../vendors/coreui/scss/progress-group";
+@import "../vendors/coreui/scss/sidebar";
+@import "../vendors/coreui/scss/switches";
+@import "../vendors/coreui/scss/tables";
+@import "../vendors/coreui/scss/widgets";
+
+// Layout Options
+@import "../vendors/coreui/scss/layout";
+
+@import "../vendors/coreui/scss/others";
+
+// Utility classes
+@import "../vendors/coreui/scss/utilities";
+
+// Right-to-left
+@import "../vendors/coreui/scss/rtl";
+
+// Custom Properties support for Internet Explorer
+@import "../vendors/coreui/scss/ie-custom-properties";
