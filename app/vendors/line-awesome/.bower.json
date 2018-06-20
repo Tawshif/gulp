@@ -1,0 +1,14 @@
+{
+  "name": "line-awesome",
+  "homepage": "https://github.com/icons8/line-awesome",
+  "_release": "912ed9f69c",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "912ed9f69c1e99ef3c451af2e8e58c5f7b6e3af9"
+  },
+  "_source": "https://github.com/icons8/line-awesome.git",
+  "_target": "*",
+  "_originalSource": "icons8/line-awesome",
+  "_direct": true
+}

@@ -1,8 +1,26 @@
 //Custom Variables
 @import "variables";
-@import 'theme';
-@import "base/base";
-@import "components/components";
-@import "helpers/helpers";
-@import "layout/layout";
-@import "pages/pages";
+
+
+//Required Bootstrap
+
+@import "../vendors/bootstrap/scss/bootstrap";
+
+//@import "../vendors/bootstrap/scss/functions";
+//@import "../vendors/bootstrap/scss/variables";
+//@import "../vendors/bootstrap/scss/mixins";
+
+//Optional
+//@import "../vendors/bootstrap/scss/reboot";
+//@import "../vendors/bootstrap/scss/type";
+//@import "../vendors/bootstrap/scss/images";
+//@import "../vendors/bootstrap/scss/code";
+//@import "../vendors/bootstrap/scss/grid";
+
+
+
+
+
+// Customized Theme
+@import "theme";
+
