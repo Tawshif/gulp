@@ -1,0 +1,101 @@
+.default-sidebar {
+  background: hsl(233, 27%, 24%);
+  position: fixed;
+  height: 100%;
+  top: 0;
+  z-index: 999;
+  transition: all 0.2s ease;
+  &.sidebar-separator {
+    background: rgba(255, 255, 255, .05);
+    height: 1px;
+    width: 90%;
+    margin: 1.07rem auto;
+  }
+  &>.side-navbar {
+    min-width: 240px;
+    max-width: 240px;
+    color: #fff;
+    z-index: 999;
+    position: relative;
+    height: 100%;
+    padding: 80px 0;
+    display: block;
+    a {
+      color: inherit;
+      position: relative;
+      font-size: 1rem;
+      &[data-toggle="collapse"]::before {
+        font-size: .85rem;
+        content: '\f111';
+        display: inline-block;
+        transform: translateY(-50%);
+        font-family: 'LineAwesome';
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+      }
+      &[aria-expanded="true"] {
+        background: #252946;
+        margin: 0 10px 0 10px;
+        border-radius: 4px 4px 0 0;
+        &::before {
+          content: '\f110'
+        }
+        & i {
+          color: #e76c90;
+        }
+      }
+      i {
+        font-size: 1.4rem;
+        margin-right: 10px;
+        transition: none;
+        vertical-align: -2px;
+        color: #fff;
+      }
+    }
+    .sidebar-header {
+      padding: 30px 15px;
+    }
+    span.heading {
+      font-weight: 600;
+      margin-left: 10px;
+      color: #aea9c3;
+      font-size: .85rem;
+      text-transform: uppercase;
+    }
+
+    ul {
+      padding: 10px 0;
+      a {
+        padding: 10px 10px;
+        text-decoration: none;
+        display: block;
+        font-weight: 500;
+      }
+      a:hover i {
+        color: #e76c90;
+      }
+      li.active i,
+      li a.active {
+        color: #e76c90;
+      }
+      ul {
+        margin: 0 10px 0 10px;
+        background: #252946;
+        border-radius: 0 0 4px 4px;
+        a {
+          font-size: .85rem;
+          padding-left: 40px;
+          color: #aea9c3;
+          &:hover {
+            color: #e76c90;
+          }
+          &:focus {
+            color: #aea9c3;
+          }
+        }
+      }
+    }
+  }
+}
