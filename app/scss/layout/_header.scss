@@ -10,13 +10,18 @@
   vertical-align: middle;
 }
 .navbar {
-  background: #fff;
+  background: $white;
   padding: 0 15px;
   color: #aea9c3;
   border-radius: 0;
   box-shadow: 0 1px 0 #eee;
   z-index: 1000;
   width: 100%;
+  a {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+  }
   .badge {
     display: block;
     width: 12px;
@@ -54,11 +59,7 @@
       }
     }
   }
-  a {
-    color: inherit;
-    display: inline-block;
-    text-decoration: none;
-  }
+
 
   .menu-btn {
     margin-right: 0;

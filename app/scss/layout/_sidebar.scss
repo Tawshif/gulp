@@ -1,20 +1,13 @@
-.default-sidebar {
+.sidebar {
   background: hsl(233, 27%, 24%);
   position: fixed;
   height: 100%;
   top: 0;
   z-index: 999;
   transition: all 0.2s ease;
-  &.sidebar-separator {
-    background: rgba(255, 255, 255, .05);
-    height: 1px;
-    width: 90%;
-    margin: 1.07rem auto;
-  }
-  &>.side-navbar {
-    min-width: 240px;
-    max-width: 240px;
-    color: #fff;
+  >.side-navbar {
+    width: 240px;
+    color: $white;
     z-index: 999;
     position: relative;
     height: 100%;
@@ -24,6 +17,7 @@
       color: inherit;
       position: relative;
       font-size: 1rem;
+      transition: all 0.5s ease;
       &[data-toggle="collapse"]::before {
         font-size: .85rem;
         content: '\f111';
@@ -42,22 +36,22 @@
         &::before {
           content: '\f110'
         }
-        & i {
+        i{
           color: #e76c90;
         }
       }
-      i {
+      i{
         font-size: 1.4rem;
         margin-right: 10px;
         transition: none;
         vertical-align: -2px;
-        color: #fff;
+        color: $white;
       }
     }
     .sidebar-header {
       padding: 30px 15px;
     }
-    span.heading {
+    .heading {
       font-weight: 600;
       margin-left: 10px;
       color: #aea9c3;
@@ -72,12 +66,11 @@
         text-decoration: none;
         display: block;
         font-weight: 500;
+        &:hover i {
+          color: #e76c90;
+        }
       }
-      a:hover i {
-        color: #e76c90;
-      }
-      li.active i,
-      li a.active {
+      li.active i, li a.active {
         color: #e76c90;
       }
       ul {
