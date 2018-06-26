@@ -59,8 +59,6 @@
       }
     }
   }
-
-
   .menu-btn {
     margin-right: 0;
     font-size: 1.2em;
@@ -122,10 +120,86 @@
         position: absolute;
         top: 20px;
         right: 10px;
-        border: 3px solid #fff;
+        border: 3px solid $white;
       }
-      .logout i {
-        margin-left: 10px;
+    }
+    .dropdown-menu{
+      min-width: 300px;
+      overflow: hidden;
+      right: 0;
+      top: 60px;
+      left:auto;
+      border: none;
+      box-shadow: 0 1px 14px rgba(0, 0, 0, 0.15);
+      a{
+        padding: 4px 8px;
+      }
+    }
+    .notification {
+      border: none;
+      &-top {
+        font-size: 16px;
+        text-align: center;
+        color: $primary;
+        padding: 15px 0;
+        position: relative;
+        span{
+          color: $danger;
+        }
+        &:after,&:before{
+          content: "";
+          height: 1px;
+          width: 20%;
+          background: hsl(252, 18%, 71%);
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:before{
+          left: auto;
+          right: 0;
+        }
+      }
+      $this: ".notification";
+      a {
+        padding: 10px 5px 10px;
+        width: 100%;
+        #{$this}-icon {
+          display: table-cell;
+          font-size: 3rem;
+          vertical-align: middle;
+          color: lighten($primary, 25);
+          width: 60px;
+          text-align: center;
+          line-height: 1;
+        }
+        #{$this}-body {
+          display: table-cell;
+          vertical-align: bottom;
+          color: lighten($primary, 15);
+          padding-left: 5px;
+          &-heading {
+            margin-bottom: 0;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.2rem;
+          }
+          .time {
+            font-size: 11px;
+            vertical-align: top;
+            font-weight: 400;
+          }
+        }
+        &:hover {
+          background: rgba($primary, 0.04);
+          #{$this}-icon {
+            color: $primary;
+          }
+          #{$this}-body {
+            color: $primary;
+          }
+        }
       }
     }
   }
@@ -153,17 +227,17 @@
       color: #5d5386;
     }
     form {
-      height: 100%
-    }
-    form input {
       height: 100%;
-      border: none;
-      padding: 20px;
-      color: #5d5386;
-    }
-    form input::placeholder {
-      color: #2a2c3d;
-      font-weight: 500;
+      input {
+        height: 100%;
+        border: none;
+        padding: 20px;
+        color: #5d5386;
+        &::placeholder {
+          color: #2a2c3d;
+          font-weight: 500;
+        }
+      }
     }
   }
 
