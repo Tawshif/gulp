@@ -1,3 +1,7 @@
+
+$header-dropdown-shadow:hsla(234, 40%, 57%, 0.3);
+
+
 .header {
   min-height: 70px;
   position: relative;
@@ -12,9 +16,9 @@
 .navbar {
   background: $white;
   padding: 0 15px;
-  color: #aea9c3;
+  color: lighten($primary, 25);
   border-radius: 0;
-  box-shadow: 0 1px 0 #eee;
+  box-shadow: 0 1px 1px rgba($primary, 0.05);
   z-index: 1000;
   width: 100%;
   a {
@@ -104,7 +108,6 @@
       }
     }
   }
-
   .nav-item {
     >.nav-link {
       position: relative;
@@ -113,6 +116,10 @@
       width: 50px;
       text-align: center;
       line-height: 70px;
+      transition: all 0.5s ease-in-out;
+      &:hover{
+        color: $primary;
+      }
       @include media-breakpoint-down(sm){
         width: 40px;
       }
@@ -130,55 +137,44 @@
       top: 60px;
       left:auto;
       border: none;
-      box-shadow: 0 1px 14px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 1px 14px $header-dropdown-shadow;
       a{
         padding: 4px 8px;
       }
     }
     .notification {
       border: none;
+      padding: 0;
       &-top {
-        font-size: 16px;
-        text-align: center;
-        color: $primary;
-        padding: 15px 0;
+        font-size: 14px;
+        padding: 10px 20px;
+        color: lighten($primary, 25);
         position: relative;
         span{
           color: $danger;
         }
-        &:after,&:before{
-          content: "";
-          height: 1px;
-          width: 20%;
-          background: hsl(252, 18%, 71%);
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-        &:before{
-          left: auto;
-          right: 0;
-        }
       }
       $this: ".notification";
       a {
-        padding: 10px 5px 10px;
+        padding: 5px;
         width: 100%;
+        transition: all 0.5s ease;
         #{$this}-icon {
           display: table-cell;
           font-size: 3rem;
           vertical-align: middle;
-          color: lighten($primary, 25);
+          color: lighten($primary, 30);
           width: 60px;
           text-align: center;
           line-height: 1;
+          transition: all 0.5s ease;
         }
         #{$this}-body {
           display: table-cell;
           vertical-align: bottom;
-          color: lighten($primary, 15);
+          color: lighten($primary, 10);
           padding-left: 5px;
+          transition: all 0.5s ease;
           &-heading {
             margin-bottom: 0;
             font-size: 1rem;
@@ -192,7 +188,6 @@
           }
         }
         &:hover {
-          background: rgba($primary, 0.04);
           #{$this}-icon {
             color: $primary;
           }
@@ -200,7 +195,16 @@
             color: $primary;
           }
         }
+        &#{$this}-all{
+          color: lighten($primary, 25);
+          padding: 10px 20px;
+          &:hover, &:focus{
+            background: none;
+            color: $primary;
+          }
+        }
       }
+
     }
   }
 
@@ -243,6 +247,17 @@
 
   .user{
     line-height: 70px;
+    color: lighten($primary, 25);
+    transition: all 0.5s ease-in-out;
+    &:hover{
+      color: $primary;
+    }
+    .name{
+      display: inline-block;
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
   }
   .avatar {
     width: 50px;

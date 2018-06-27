@@ -1,46 +1,49 @@
-//@font-face {
-//  font-family: 'Poppins';
-//  font-style: normal;
-//  font-weight: 400;
-//  src: local('Poppins Regular'),
-//  url(../fonts/Poppins/Poppins-Regular.ttf) format('ttf');
-//}
+//$font-name:'Poppins';
+//$font-name:'Oxygen';
+$font-name: 'AvenirNext';
+
+//$font-name:'Rubik';
+$fail-back:"Helvetica Neue",sans-serif;
+
+//@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
+
 
 @font-face {
-  font-family: 'Rubik';
+  font-family: $font-name;
   font-style: normal;
   font-weight: 300;
-  src: local('Rubik Light'),
-  url(../fonts/Rubik/Rubik-Light.ttf) format('ttf');
+  src: local('#{$font-name} Light'),
+  url(../fonts/#{$font-name}/#{$font-name}-Light.ttf) format('ttf');
 }
 
 @font-face {
-  font-family: 'Rubik';
+  font-family: $font-name;
   font-style: normal;
   font-weight: 400;
-  src: local('Rubik Regular'),
-  url(../fonts/Rubik/Rubik-Regular.ttf) format('ttf');
+  src: local('#{$font-name} Regular'),
+  url(../fonts/#{$font-name}/#{$font-name}-Regular.ttf) format('ttf');
 }
 
 @font-face {
-  font-family: 'Rubik';
+  font-family: $font-name;
   font-style: normal;
   font-weight: 500;
-  src: local('Rubik Medium'),
-  url(../fonts/Rubik/Rubik-Medium.ttf) format('ttf');
+  src: local('#{$font-name} Medium'),
+  url(../fonts/#{$font-name}/#{$font-name}-Medium.ttf) format('ttf');
 }
 
 @font-face {
-  font-family: 'Rubik';
+  font-family: $font-name;
   font-style: normal;
   font-weight: 700;
-  src: local('Rubik Bold'),
-  url(../fonts/Rubik/Rubik-Bold.ttf) format('ttf');
+  src: local('#{$font-name} Bold'),
+  url(../fonts/#{$font-name}/#{$font-name}-Bold.ttf) format('ttf');
 }
 
 html,
 body {
   //font-family: Poppins,"Helvetica Neue",sans-serif;
+  font-family: $font-name, $fail-back;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -ms-text-size-adjust: 100%;
