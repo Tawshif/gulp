@@ -38,7 +38,7 @@ gulp.task('sass', function () {
             this.emit('end');
         }))
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'expanded'})) // Passes it through a gulp-sass
+        .pipe(sass({outputStyle: 'expanded'})) // Passes it through a gulp-sass { compressed , compact, expanded }
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(plumber.stop())
         .pipe(sourcemaps.write())

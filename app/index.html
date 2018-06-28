@@ -56,7 +56,7 @@
 					</li>
 					<!-- End Search -->
 					<!-- Begin Notifications -->
-					<li class="nav-item dropdown">
+					<li class="nav-item dropdown pr-2">
 						<a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
 							<i class="la la-bell animated infinite swing"></i><span class="badge-pulse"></span>
 						</a>
@@ -129,30 +129,38 @@
 							<span class="name">Tawshif Ahsan Khan</span>
 							<i class="la la-angle-down"></i>
 						</a>
-						<ul aria-labelledby="user" class="user-size dropdown-menu">
+						<ul aria-labelledby="user" class="user-details dropdown-menu">
 							<li class="welcome">
-								<a href="#" class="edit-profil"><i class="la la-gear"></i></a>
-								<img src="images/avatar-01.jpg" alt="..." class="rounded-circle">
+								<img src="images/avatar-01.jpg" alt="***" class="rounded-circle">
+								<span class="info">
+									<span class="name">Tawshif Ahsan Khan</span>
+									<span class="mail">anikphp@gmail.com</span>
+								</span>
 							</li>
+							<div class="separator"></div>
 							<li>
 								<a href="pages-profile.html" class="dropdown-item">
+									<span class="la la-male"></span>
 									Profile
 								</a>
 							</li>
 							<li>
 								<a href="app-mail.html" class="dropdown-item">
+									<span class="la la-envelope"></span>
 									Messages
 								</a>
 							</li>
 							<li>
-								<a href="#" class="dropdown-item no-padding-bottom">
-									Settings
+								<a href="#" class="dropdown-item">
+									<span class="la la-cog"></span>
+									Account Settings
 								</a>
 							</li>
-							<li class="separator"></li>
+							<div class="separator"></div>
 							<li>
-								<a href="pages-faq.html" class="dropdown-item no-padding-top">
-									Faq
+								<a href="pages-faq.html" class="dropdown-item">
+									<span class="la la-power-off"></span>
+									Signout
 								</a>
 							</li>
 						</ul>
@@ -296,7 +304,8 @@
 
 
 	<!--build:js js/main.min.js -->
-	<script src="vendors/jquery/dist/jquery.slim.min.js"></script>
+	<!--<script src="vendors/jquery/dist/jquery.slim.min.js"></script>-->
+	<script src="vendors/jquery/dist/jquery.min.js"></script>
 	<script src="vendors/popper.js/dist/umd/popper.min.js"></script>
 	<script src="vendors/bootstrap/dist/js/bootstrap.js"></script>
   <script src="js/main.js"></script>
