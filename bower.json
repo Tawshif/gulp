@@ -17,8 +17,9 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "bootstrap4#^4.0.0",
-    "tether": "^1.4.3",
-    "jquery": "^3.3.1"
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "line-awesome": "icons8/line-awesome"
   }
 }
