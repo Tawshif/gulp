@@ -1,12 +1,17 @@
+$sidebar-width:240px;
+$sidebar-background:hsl(233, 27%, 24%);
+$sidebar-background-active:#252946;
+$sidebar-text-active: #e76c90;
+
 .sidebar {
-  background: hsl(233, 27%, 24%);
+  background: $sidebar-background;
   position: fixed;
   height: 100%;
   top: 0;
   z-index: 999;
   transition: all 0.2s ease;
   >.side-navbar {
-    width: 240px;
+    width: $sidebar-width;
     color: $white;
     z-index: 999;
     position: relative;
@@ -30,14 +35,14 @@
         right: 20px;
       }
       &[aria-expanded="true"] {
-        background: #252946;
+        background: $sidebar-background-active;
         margin: 0 10px 0 10px;
         border-radius: 4px 4px 0 0;
         &::before {
           content: '\f110'
         }
         i{
-          color: #e76c90;
+          color: $sidebar-text-active;
         }
       }
       i{
