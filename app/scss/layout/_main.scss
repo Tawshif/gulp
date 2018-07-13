@@ -1,4 +1,4 @@
-$main-container-width: calc(100% - $sidebar-width);
+$main-container-width: calc(100% - #{$sidebar-width});
 $main-container-padding:15px;
 
 .main-container{
