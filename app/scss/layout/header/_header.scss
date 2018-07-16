@@ -1,10 +1,7 @@
 $nav-color:lighten($primary, 25);
 $nav-hover-color: $primary;
 $nav-shadow: 0 1px 1px rgba($primary, 0.05);
-
-//$nav-dropdown-shadow:0 1px 14px hsla(234, 40%, 57%, 0.3);
 $nav-dropdown-shadow:0 3px 14px lighten($primary, 35);
-
 $transition-time: 0.3s;
 
 .header {
@@ -258,42 +255,7 @@ $transition-time: 0.3s;
     }
   }
 
-  .search-box {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0;
-    background: #fff;
-    z-index: 9999;
-    border-radius: 0;
-    display: none;
-    .dismiss {
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 1.2rem;
-      color: #5d5386;
-    }
-    form {
-      height: 100%;
-      input {
-        height: 100%;
-        border: none;
-        padding: 20px;
-        color: #5d5386;
-        &::placeholder {
-          color: #2a2c3d;
-          font-weight: 500;
-        }
-      }
-    }
-  }
+
 
   .user{
     line-height: 70px;
@@ -322,4 +284,4 @@ $transition-time: 0.3s;
   }
 }
 
-
+@import "search-box";

@@ -18,8 +18,11 @@
 		<nav class="navbar fixed-top">
 
 			<!-- Begin Search Box-->
-			<div class="search-box">
-				<button class="dismiss"><i class="ion-close-round"></i></button>
+			<div class="search-box" id="search-box" role="searchbox">
+				<button class="dismiss"
+				        data-target="#search-box"
+				        data-toggle="collapse"
+				        aria-controls="#search-box" aria-expanded="true" ><i class="la la-times"></i></button>
 				<form id="searchForm" action="#" role="search">
 					<input type="search" placeholder="Search something ..." class="form-control">
 				</form>
@@ -50,11 +53,16 @@
 
 				<!-- Begin Navbar Menu -->
 				<ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center pull-right m-0">
+
 					<!-- Search -->
 					<li class="nav-item d-flex align-items-center">
-						<a id="search" href="#" class="nav-link"><i class="la la-search"></i></a>
+						<a id="search" href="#" class="nav-link"
+						   data-target="#search-box"
+						   aria-controls="#search-box"
+						   data-toggle="collapse" aria-expanded="false"><i class="la la-search"></i></a>
 					</li>
 					<!-- End Search -->
+
 					<!-- Begin Notifications -->
 					<li class="nav-item dropdown pr-2">
 						<a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
@@ -122,6 +130,7 @@
 						</ul>
 					</li>
 					<!-- End Notifications -->
+
 					<!-- User -->
 					<li class="nav-item dropdown">
 						<a id="user" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="user">
@@ -166,10 +175,14 @@
 						</ul>
 					</li>
 					<!-- End User -->
+
 				</ul>
 				<!-- End Navbar Menu -->
 			</div>
 			<!-- End Topbar -->
+
+
+
 		</nav>
 	</header>
 
