@@ -3,6 +3,7 @@ $sidebar-background:hsl(233, 27%, 24%);
 $sidebar-background-active:#252946;
 $sidebar-text-active: #e76c90;
 
+
 .sidebar {
   background: $sidebar-background;
   position: fixed;
@@ -72,11 +73,11 @@ $sidebar-text-active: #e76c90;
         display: block;
         font-weight: 500;
         &:hover i {
-          color: #e76c90;
+          color: $sidebar-text-active;
         }
       }
       li.active i, li a.active {
-        color: #e76c90;
+        color: $sidebar-text-active;
       }
       ul {
         margin: 0 10px 0 10px;
@@ -87,10 +88,10 @@ $sidebar-text-active: #e76c90;
           padding-left: 40px;
           color: #aea9c3;
           &:hover {
-            color: #e76c90;
+            color: $sidebar-text-active;
           }
           &:focus {
-            color: #aea9c3;
+            color: $sidebar-text-active;
           }
         }
       }
