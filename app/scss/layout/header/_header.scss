@@ -42,71 +42,77 @@ $transition-time: 0.3s;
       width: 14px;
       height: 14px;
       border-radius: 50%;
-      box-shadow: 0 0 0 rgba($danger,.4);
+      box-shadow: 0 0 0 rgba($danger, .4);
       animation: BadgePulse 1.8s infinite;
     }
   }
-  .navbar-brand {
-    .brand-big {
-      @include media-breakpoint-down(md){
+  &-header {
+    width: 225px;
+    display: flex;
+    justify-content: space-between;
+    .navbar-brand {
+      .brand-big {
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+        .logo-big {
+          width: 140px;
+        }
+      }
+      .brand-small {
         display: none;
-      }
-      .logo-big {
-        width: 140px;
+        @include media-breakpoint-down(md) {
+          display: block;
+        }
+        .logo-small {
+          width: 40px;
+        }
       }
     }
-    .brand-small {
-      display: none;
-      @include media-breakpoint-down(md){
+    .menu-btn {
+      margin-right: 0;
+      font-size: 1.2em;
+      vertical-align: middle;
+      padding: 0;
+      align-self: center;
+      span {
+        background: #aea9c3;
+        width: 20px;
+        height: 2px;
         display: block;
+        margin: 7px 0;
+        border-radius: 35px;
+        transition: all 0.3s cubic-bezier(.81, -.33, .345, 1.375);
+        &:nth-of-type(2) {
+          position: relative;
+          width: 30px;
+        }
+        &:last-of-type {
+          position: relative;
+          width: 15px;
+          margin-top: 0;
+        }
+        &:first-of-type {
+          margin-top: 0;
+          transition: all 0.6s;
+        }
       }
-      .logo-small {
-        width: 40px;
-      }
-    }
-  }
-  .menu-btn {
-    margin-right: 0;
-    font-size: 1.2em;
-    vertical-align: middle;
-    padding: 0;
-    span {
-      background: #aea9c3;
-      width: 20px;
-      height: 2px;
-      display: block;
-      margin: 7px 0;
-      border-radius: 35px;
-      transition: all 0.3s cubic-bezier(.81, -.33, .345, 1.375);
-      &:nth-of-type(2) {
-       position: relative;
-       width: 30px;
-      }
-      &:last-of-type {
-       position: relative;
-       width: 15px;
-       margin-top: 0;
-      }
-      &:first-of-type {
-       margin-top: 0;
-       transition: all 0.6s;
-      }
-    }
-    &.active,&:hover {
-      span:first-of-type {
-        transform: translateX(10px);
-        margin-top: 0;
-      }
-      span:nth-of-type(2) {
-        transform: none;
-      }
-      span:last-of-type {
-        margin-top: 0;
-        transition: all 0.3s;
-      }
-      span:last-of-type {
-        transform: translateX(15px);
-        margin-top: 0;
+      &.active, &:hover {
+        span:first-of-type {
+          transform: translateX(10px);
+          margin-top: 0;
+        }
+        span:nth-of-type(2) {
+          transform: none;
+        }
+        span:last-of-type {
+          margin-top: 0;
+          transition: all 0.3s;
+        }
+        span:last-of-type {
+          transform: translateX(15px);
+          margin-top: 0;
+        }
       }
     }
   }
