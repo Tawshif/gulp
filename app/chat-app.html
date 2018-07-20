@@ -314,10 +314,10 @@
 		<div class="chat-app">
 			<div class="contacts">
 				<div class="contacts-search">
-					<form action="">
+					<form action="chat-app.html">
 						<div class="input-area">
 							<i class="la la-search"></i>
-							<input type="text" placeholder="Search People">
+							<input type="text" placeholder="Search People" class="input">
 						</div>
 					</form>
 				</div>
@@ -329,9 +329,9 @@
 						</span>
 						<span class="contact-person-information">
 							<h5 class="name">Tawshif Ahsan Khan</h5>
-							<p>Short message description of one line ...</p>
+							<p class="short-msg">Short message description of one line ...</p>
 						</span>
-						<span class="notification-area">
+						<span class="contact-person-notification">
 							<span class="time">09:15 AM</span>
 							<span class="indicator active"></span>
 						</span>
@@ -379,6 +379,37 @@
 						</span>
 					</li>
 				</ul>
+			</div>
+			<div class="chatBox">
+				<div class="chatBox-header"></div>
+				<div class="chatBox-chat-area">
+					<div class="messages from-me">
+						<div class="avater">
+							<img src="images/avatar-01.jpg" alt="avater">
+						</div>
+						<div class="message">
+							<p class="message-text">Lorem ipsum dolor sit amet, consectetur</p>
+							<div class="time-stamp">05:00 pm</div>
+						</div>
+					</div>
+					<div class="messages from-contact">
+						<div class="avater">
+							<img src="images/avatar-01.jpg" alt="avater">
+						</div>
+						<div class="message">
+							<p>Lorem ipsum dolor sit amet, consectetur</p>
+							<div class="time-stamp">05:00 pm</div>
+						</div>
+					</div>
+				</div>
+				<div class="chatBox-input">
+					<form action="chat-app.html">
+						<div class="form-group">
+							<input type="text" placeholder="Search People" class="chat-input">
+							<button class="chat-input-btn" type="submit">Send</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 

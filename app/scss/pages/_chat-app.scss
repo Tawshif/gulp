@@ -1,0 +1,57 @@
+.chat-app{
+  .contacts{
+    &-search{
+      .input-area{
+
+      }
+    }
+    &-list {
+      .contact-person {
+        &-avatar {
+          img {
+
+          }
+          .notification {
+
+          }
+        }
+        &-information {
+          .name {
+
+          }
+          .short-msg {
+
+          }
+        }
+        &-notification{
+          .time{}
+          .indicator{}
+        }
+      }
+    }
+  }
+  .chatBox{
+    &-header{
+
+    }
+    &-chat-area {
+      .messages{
+
+        .avater {
+
+          img{
+
+          }
+        }
+        .message {
+          &-text {
+
+          }
+          .time-stamp {
+
+          }
+        }
+      }
+    }
+  }
+}
