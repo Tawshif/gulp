@@ -1,0 +1,32 @@
+.login-container{
+  max-width: 400px;
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,.25);
+  border-radius: 5px;
+  padding: 30px;
+  text-align: center;
+  margin: 20% auto 0;
+  background: $white;
+}
+.login-items{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 300px;
+  .btn{
+    height: 36px;
+    width: 200px;
+    border-radius: 3px;
+    background: honeydew;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+  }
+  .btn-login-fb{
+    color: $white;
+    background-color: #4267b2;
+  }
+  .btn-login-google{
+    color: $white;
+    background-color: #d83f1f;
+  }
+}

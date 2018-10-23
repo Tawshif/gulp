@@ -1,0 +1,37 @@
+.app-container{
+  display: flex;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.restaurant-area{
+  margin-top: 20px;
+  width: 100%;
+  position: relative;
+  .map{
+    width: 100%;
+    height: calc(100vh - 40px);
+    background: #f3f2f2;
+    border-radius: 3px;
+    &-controller{
+      position: relative;
+      .btn-my-location{
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        border-radius: 25px;
+        transform: translateX(-50%);
+        width: 180px;
+        height: 50px;
+        color: $white;
+        background: #d83f1f;
+        font-weight: 500;
+        .fa-map{
+          font-size: 16px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+}
