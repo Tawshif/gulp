@@ -2,15 +2,23 @@
   display: flex;
   width: calc(100% - 40px);
   margin: 0 auto;
+  @include media-breakpoint-down(sm){
+    width: 100%;
+  }
 }
-
 .restaurant-area{
-  margin-top: 20px;
   width: 100%;
   position: relative;
+  height: 100vh;
+  overflow-y: hidden;
   .map{
     width: 100%;
     height: calc(100vh - 40px);
+    margin-top: 20px;
+    @include media-breakpoint-down(sm){
+      height: 100vh ;
+      margin-top: 0;
+    }
     background: #f3f2f2;
     border-radius: 3px;
     &-controller{
@@ -33,5 +41,76 @@
       }
     }
   }
+}
 
+
+.restaurant {
+  &-list{
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    padding: 16px;
+    width: 100%;
+    background: $white;
+    box-shadow: 0 1px 4px #0000001c;
+    transition: bottom 0.6s cubic-bezier(0.69, -0.22, 0.15, 0.88);
+    &.on-display{
+      bottom: 0;
+    }
+    &-container{
+      max-width: 476px;
+      margin: 0 auto;
+      @include media-breakpoint-up(sm){
+        //background: #fbfbfb;
+        padding: 16px;
+      }
+    }
+    .scroll{
+      max-height: 350px;
+      overflow-y: auto;
+    }
+  }
+  &-list-item{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    flex-direction: row-reverse;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &-image{
+    flex: 0 0 110px;
+    .img{
+      border-radius: 5px;
+      display: inline-block;
+      width: 100px;
+      height: 65px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  &-info{
+    flex: calc(100% - 110px);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    .title{
+      font-size: 16px;
+      margin: 0;
+      width: 100%;
+      color: #2c2c2c;
+    }
+    .rating, .foodicon-rating{
+      font-size: 14px;
+      margin: 0;
+      color: #757575;
+      font-weight: 400;
+      flex: 0 0 100%;
+    }
+    .foodicon-rating{
+      color: #4b4b4b;
+    }
+  }
 }

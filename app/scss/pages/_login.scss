@@ -1,10 +1,14 @@
+.is-login{
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+}
 .login-container{
   max-width: 400px;
-  box-shadow: 0 1px 6px 0 rgba(0,0,0,.25);
   border-radius: 5px;
   padding: 30px;
   text-align: center;
-  margin: 20% auto 0;
+  margin: 0 auto 0;
   background: $white;
 }
 .login-items{
@@ -12,13 +16,19 @@
   justify-content: center;
   flex-wrap: wrap;
   align-content: center;
-  height: 300px;
+  .company-logo {
+    flex: 0 0 100%;
+    margin-bottom: 2rem;
+    .logo {
+      width: 60px;
+    }
+  }
+
   .btn{
     height: 36px;
     width: 200px;
     border-radius: 3px;
-    background: honeydew;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     font-weight: 500;
   }
   .btn-login-fb{
@@ -28,5 +38,8 @@
   .btn-login-google{
     color: $white;
     background-color: #d83f1f;
+  }
+  .btn-link{
+    font-weight: 400;
   }
 }
