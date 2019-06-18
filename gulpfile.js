@@ -9,13 +9,12 @@ var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
-var del = require('del');
+var clean = require('gulp-clean');
 var plumber = require('gulp-plumber');
-var runSequence = require('run-sequence');
 var jshint = require('gulp-jshint');
 
 var autoprefixerOptions = {
-    browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+    overrideBrowserslist: ['last 2 versions']
 };
 // Development Tasks
 // -----------------
@@ -75,9 +74,9 @@ gulp.task('watch', function () {
 // ------------------
 
 // Optimizing CSS and JavaScript
-gulp.task('useref', function () {
+gulp.task('opt', function () {
     return gulp.src('app/*.html')
-        .pipe(useref())
+        .pipe(useref({ searchPath: 'app' }))
         .pipe(gulpIf('*.js', uglify()))
         .pipe(gulpIf('*.css', cssnano()))
         .pipe(gulp.dest('dist'));
@@ -107,28 +106,18 @@ gulp.task('vendors', function () {
 
 // Cleaning
 gulp.task('clean', function () {
-    return del.sync('dist').then(function (cb) {
-        return cache.clearAll(cb);
-    });
-});
-
-gulp.task('clean:dist', function () {
-    return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
+    return gulp.src('dist', {allowEmpty:true})
+        .pipe(clean({force: true}))
+        .pipe(gulp.dest('dist'));
 });
 
 // Build Sequences
 // ---------------
 
-gulp.task('default', function (callback) {
-    runSequence(['sass', 'browserSync', 'watch'],
-        callback
-    )
-});
+gulp.task('default', gulp.series('sass', 'browserSync', 'watch', function (done) {
+    done();
+}));
 
-gulp.task('build', function (callback) {
-    runSequence(
-        'clean:dist',
-        'sass', ['useref', 'images', 'fonts', 'vendors'],
-        callback
-    )
-});
+gulp.task('build', gulp.series('clean','sass','opt','images', 'fonts', 'vendors', function (done) {
+    done();
+}));
